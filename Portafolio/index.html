@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Agustin Nahuel Aciar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body id="top">
+
+    <aside class="barra-lateral">
+        
+        <div class="perfil-wrapper">
+            <div class="foto-perfil">
+                <img src="img/foto.png" alt="Foto">
+            </div>
+        </div>
+        
+        <h2 class="nombre-perfil">Nahuel Aciar</h2>
+        <p class="profesion">Desarrollador</p>
+        
+        <p class="descripcion-breve">
+            Estudiante Avanzado - Tecnicatura Universitaria en Programacion - UTN
+        </p>
+        <div class="info-contacto-social">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i> <span>Mendoza-Argentina</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i> <a href="mailto:aciaragustinahuel@gmail.com">Mail</a>
+            </div>
+            <div class="info-item">
+                <i class="fa-brands fa-github"></i> <a href="https://github.com/NahuelA19" target="_blank">Github</a>
+            </div>
+            <div class="info-item">
+                <i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/" target="_blank">Linkedin</a>
+            </div>
+           
+        </div>
+
+        <a href="img/cv.jpg" class="boton-cv" target="_blank">Ver CV</a>
+    </aside>
+
+    <main class="contenido-principal">
+        
+        <header class="header-principal">
+            <div class="logo">
+                <img src="img/nils.png" alt="Logo" />
+            </div>
+            
+            <nav class="navegacion-superior">
+                <a href="#sobre-mi" class="nav-link active">Sobre Mí</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+            </nav>
+            
+            <div class="header-acciones">
+                <a href="#contacto" class="boton-contacto">Contactar</a>
+                <button class="boton-modo-oscuro" aria-label="Cambiar tema">
+                    <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+        </header>
+
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre Mí</h2>
+            <div class="sobre-mi-container">
+                <div class="sobre-mi-texto">
+                    <h3>Hola, soy Nahuel Aciar</h3>
+                    <p>
+                        Actualmente estoy cursando el ultimo año de la tecnicatura en programacion. 
+                    </p>
+                    <p>
+                        Durante el cursado he aprendido las bases de distintos lenguajes de programacion y base de datos. 
+                        Estoy buscando la oportunidad de seguir formandome y trabajar en equipo en proyecto profesionales.
+                    </p>
+                </div>
+                
+                <div class="sobre-mi-habilidades">
+                    <h3>Habilidades adquiridas en:</h3>
+                    <ul class="lista-habilidades">
+                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                        <li><i class="fa-brands fa-node-js"></i> Node.js (Express)</li>
+                        <li><i class="fa-brands fa-java"></i> Java (Spring Boot)</li>
+                        <li><i class="fa-solid fa-database"></i> SQL (MySQL)</li>
+                        <li><i class="fa-solid fa-leaf"></i> MongoDB</li>
+                        <li><i class="fa-brands fa-html5"></i> HTML5</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <h2>Proyectos</h2>
+            
+            <div class="proyectos-grid">
+
+                <article class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="img/food_store.png" alt="Vista previa del Proyecto 1">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>E-Commerce-FoodStore</h3>
+                        <p>
+                             Estamos realizando un E-Commerce con Java Spring - JavaScript.
+                        </p>
+                        <div class="proyecto-enlaces">
+                            <a href="https://github.com/Coders-UTN/final-prog3" target="_blank" class="enlace-codigo">
+                                <i class="fa-brands fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="img/bd.png" alt="Vista previa del Proyecto 2">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>Integrador-BD2</h3>
+                        <p>
+                            Final-BD2 con MongoDB,Express con Docker y un token para la sesion.
+                        </p>
+                        <div class="proyecto-enlaces">
+                            <a href="https://github.com/Coders-UTN/integrador-bd2" target="_blank" class="enlace-codigo">
+                                <i class="fa-brands fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="img/proximamente.jpg" alt="Vista previa del Proyecto 3">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>Proximamente</h3>
+                        <p>
+                            Aca ira el proyecto que en un futuro haremos juntos.
+                        </p>
+                        <div class="proyecto-enlaces">
+                            <a href="#" target="_blank" class="enlace-demo">Ver</a>
+                            <a href="#" target="_blank" class="enlace-codigo">
+                                <i class="fa-brands fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <p class="contacto-intro">
+                ¿Tienes una duda o quieres mas informacion? 
+                Enviame un mensaje y sera respondido a la brevedad.
+            </p>
+            
+            <form id="contact-form" class="contacto-form">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="name" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="message" rows="5" required></textarea>
+                </div>
+                <input type="submit" id="button" class="boton-enviar" value="Enviar Mensaje">
+            </form>
+        </section>
+
+        
+        <a href="#top" id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+    </main>
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
