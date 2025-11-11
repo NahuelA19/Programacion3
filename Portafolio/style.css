@@ -445,7 +445,7 @@ body.dark-mode .scroll-top-btn:hover {
 }
 
 .enlace-codigo {
-    background-color: var(--color-fondo-seccion);
+    background-color: transparent;
     color: var(--color-primario-oscuro);
     border: 1px solid var(--color-primario-oscuro);
     flex-grow: 1;
@@ -657,4 +657,35 @@ body.dark-mode .boton-enviar:hover {
     .contacto-form {
         max-width: 100%;
     }
+}
+
+.form-message {
+  margin-top: 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.form-message.success {
+  color: #16a34a;
+  opacity: 1;
+  max-height: 50px;
+}
+
+.form-message.error {
+  color: #dc2626;
+  opacity: 1;
+  max-height: 50px;
+}
+
+body.dark-mode .form-message.success {
+  color: #4ade80;
+}
+
+body.dark-mode .form-message.error {
+  color: #f87171;
 }

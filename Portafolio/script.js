@@ -1,19 +1,33 @@
+(function() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const btnModoOscuro = document.querySelector('.boton-modo-oscuro');
     const body = document.body;
+    const icon = btnModoOscuro ? btnModoOscuro.querySelector('i') : null;
+
+    if (icon && localStorage.getItem('theme') === 'dark') {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
 
     if (btnModoOscuro) {
         btnModoOscuro.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             
-            const icon = btnModoOscuro.querySelector('i');
             if (body.classList.contains('dark-mode')) {
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
             } else {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
             }
         });
     }
@@ -62,25 +76,42 @@ document.addEventListener('DOMContentLoaded', () => {
     emailjs.init('C-y4RtpMgInwvTJGk');
 
     const btn = document.getElementById('button');
+    const form = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
 
-    document.getElementById('contact-form')
-     .addEventListener('submit', function(event) {
+    form.addEventListener('submit', function(event) {
        event.preventDefault();
 
        btn.value = 'Enviando...';
+       
+       formMessage.textContent = '';
+       formMessage.className = 'form-message'; 
 
        const serviceID = 'default_service';
        const templateID = 'template_9gv6bst';
-       const form = this;
 
        emailjs.sendForm(serviceID, templateID, form)
         .then(() => {
-          btn.value = 'Enviar Mensaje';
-          alert('¡Mensaje enviado!');
-          form.reset();
+           btn.value = 'Enviar Mensaje';
+           form.reset();
+           
+           formMessage.textContent = '¡Mensaje enviado con éxito!';
+           formMessage.classList.add('success');
+           
+           setTimeout(() => {
+                formMessage.className = 'form-message';
+           }, 5000);
+
         }, (err) => {
-          btn.value = 'Enviar Mensaje';
-          alert('Error al enviar: ' + JSON.stringify(err));
+           btn.value = 'Enviar Mensaje';
+           
+           formMessage.textContent = 'Hubo un error al enviar el mensaje.';
+           formMessage.classList.add('error');
+           console.error('EmailJS Error:', err);
+           
+           setTimeout(() => {
+                formMessage.className = 'form-message';
+           }, 5000);
         });
     });
 
